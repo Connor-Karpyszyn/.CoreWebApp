@@ -1,0 +1,33 @@
+﻿@{
+	{ Layout = "~/Views/Shared/_Layout2.cshtml"; }
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/site.css" asp-append-version="true" />
+<div class="container">
+	<div class="col-6">
+		<h2 class="text-info" style="padding-top">Project List</h2>
+	</div>
+	<div class="col-3 offset-9">
+		<a asp-action="Upsert" asp-controller="Books" class="btn btn-info form-control text-white bg-info btn-outline-info">
+			Add New Project
+		</a>
+	</div>
+	<div class="col-12 border p-3 jumbotron-fluid">
+		<table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Author</th>
+					<th>ISBN</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+
+<br />
+
+@section Scripts{
+	<script src="~/js/bookList.js"></script>
+}
